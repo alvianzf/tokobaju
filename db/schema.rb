@@ -11,14 +11,23 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2018_11_14_073518) do
+=======
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_14_082811) do
 =======
 ActiveRecord::Schema.define(version: 2018_11_14_073545) do
 >>>>>>> 0cfa0530a5bbcd1732601a4919cfa9ae56b899fb
+>>>>>>> 69bac787b34468de167129cabbc66c4f7d61e057
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+=======
 <<<<<<< HEAD
   create_table "products", force: :cascade do |t|
     t.text "name"
@@ -30,6 +39,7 @@ ActiveRecord::Schema.define(version: 2018_11_14_073545) do
     t.text "email"
     t.text "password"
 >>>>>>> 0cfa0530a5bbcd1732601a4919cfa9ae56b899fb
+>>>>>>> 69bac787b34468de167129cabbc66c4f7d61e057
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
