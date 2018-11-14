@@ -10,14 +10,66 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_14_072349) do
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2018_11_14_135536) do
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2018_11_14_073518) do
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2018_11_14_082811) do
+=======
+ActiveRecord::Schema.define(version: 2018_11_14_073545) do
+>>>>>>> 0cfa0530a5bbcd1732601a4919cfa9ae56b899fb
+>>>>>>> 69bac787b34468de167129cabbc66c4f7d61e057
+>>>>>>> 259925a347e85ff012769736ffc58e6fdee2bd72
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "product_categories", force: :cascade do |t|
     t.integer "product_id"
     t.integer "category_id"
+=======
+<<<<<<< HEAD
+  create_table "roles", force: :cascade do |t|
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_roles", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+=======
+<<<<<<< HEAD
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+=======
+<<<<<<< HEAD
+  create_table "products", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.float "price"
+    t.integer "stock"
+=======
+>>>>>>> 259925a347e85ff012769736ffc58e6fdee2bd72
+  create_table "users", force: :cascade do |t|
+    t.text "email"
+    t.text "password"
+>>>>>>> 0cfa0530a5bbcd1732601a4919cfa9ae56b899fb
+>>>>>>> 69bac787b34468de167129cabbc66c4f7d61e057
+>>>>>>> master
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
