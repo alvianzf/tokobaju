@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -25,4 +24,3 @@ Things you may want to cover:
 * ...
 =======
 # tokobaju
->>>>>>> 9191a184cd712d8d21192fe683902592c2cb2404
