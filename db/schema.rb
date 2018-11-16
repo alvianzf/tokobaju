@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_14_135536) do
 =======
 <<<<<<< HEAD
@@ -35,11 +36,17 @@ ActiveRecord::Schema.define(version: 2018_11_14_073545) do
 ActiveRecord::Schema.define(version: 2018_11_15_023950) do
 >>>>>>> 78629671d21aa29f837865f57efab758fb0f37e2
 >>>>>>> e59c1268149107ef42c4deef7bb38c4cf3147a1d
+=======
+ActiveRecord::Schema.define(version: 2018_11_15_033153) do
+>>>>>>> 10923ccc5f79e5a237a814d74ffa51cfdcf00850
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 10923ccc5f79e5a237a814d74ffa51cfdcf00850
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -47,6 +54,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_023950) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,13 +77,33 @@ ActiveRecord::Schema.define(version: 2018_11_15_023950) do
 
   create_table "roles", force: :cascade do |t|
     t.string "status"
+=======
+  create_table "product_categories", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "category_id"
+>>>>>>> 10923ccc5f79e5a237a814d74ffa51cfdcf00850
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-=======
+  end
+
   create_table "product_reviews", force: :cascade do |t|
     t.string "comment"
     t.integer "rate"
->>>>>>> 78629671d21aa29f837865f57efab758fb0f37e2
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.float "price"
+    t.integer "stock"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "user_roles", force: :cascade do |t|
@@ -85,6 +113,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_023950) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -105,6 +134,8 @@ ActiveRecord::Schema.define(version: 2018_11_15_023950) do
 =======
 >>>>>>> 78629671d21aa29f837865f57efab758fb0f37e2
 >>>>>>> e59c1268149107ef42c4deef7bb38c4cf3147a1d
+=======
+>>>>>>> 10923ccc5f79e5a237a814d74ffa51cfdcf00850
   create_table "users", force: :cascade do |t|
     t.text "email"
     t.text "password"
