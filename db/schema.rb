@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2018_11_14_135536) do
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_14_135536) do
 =======
@@ -39,14 +42,18 @@ ActiveRecord::Schema.define(version: 2018_11_15_023950) do
 =======
 ActiveRecord::Schema.define(version: 2018_11_15_033153) do
 >>>>>>> 10923ccc5f79e5a237a814d74ffa51cfdcf00850
+>>>>>>> f61f72d8f295d31156e088866a92f79bba3ecee3
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 10923ccc5f79e5a237a814d74ffa51cfdcf00850
+>>>>>>> f61f72d8f295d31156e088866a92f79bba3ecee3
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -57,8 +64,11 @@ ActiveRecord::Schema.define(version: 2018_11_15_033153) do
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e59c1268149107ef42c4deef7bb38c4cf3147a1d
+>>>>>>> f61f72d8f295d31156e088866a92f79bba3ecee3
   create_table "product_categories", force: :cascade do |t|
     t.integer "product_id"
     t.integer "category_id"
@@ -75,6 +85,8 @@ ActiveRecord::Schema.define(version: 2018_11_15_033153) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
   create_table "roles", force: :cascade do |t|
     t.string "status"
 =======
@@ -100,6 +112,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_033153) do
     t.datetime "updated_at", null: false
   end
 
+>>>>>>> f61f72d8f295d31156e088866a92f79bba3ecee3
   create_table "roles", force: :cascade do |t|
     t.string "status"
     t.datetime "created_at", null: false
@@ -113,6 +126,8 @@ ActiveRecord::Schema.define(version: 2018_11_15_033153) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -136,6 +151,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_033153) do
 >>>>>>> e59c1268149107ef42c4deef7bb38c4cf3147a1d
 =======
 >>>>>>> 10923ccc5f79e5a237a814d74ffa51cfdcf00850
+>>>>>>> f61f72d8f295d31156e088866a92f79bba3ecee3
   create_table "users", force: :cascade do |t|
     t.text "email"
     t.text "password"
