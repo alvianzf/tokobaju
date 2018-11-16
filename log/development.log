@@ -343,6 +343,7 @@ Migrating to CreateUsers (20181114073545)
 >>>>>>> 0cfa0530a5bbcd1732601a4919cfa9ae56b899fb
   ↳ bin/rails:9
 <<<<<<< HEAD
+<<<<<<< HEAD
   [1m[35m (1149.3ms)[0m  [1m[35mCREATE DATABASE "tokobaju_development" ENCODING = 'unicode'[0m
   ↳ /home/muhammad/.rbenv/versions/2.5.3/bin/rake:23
   [1m[35m (716.3ms)[0m  [1m[35mCREATE DATABASE "tokobaju_test" ENCODING = 'unicode'[0m
@@ -396,8 +397,37 @@ Migrating to CreateRoles (20181114135536)
   ↳ /home/muhammad/.rbenv/versions/2.5.3/bin/rake:23
 =======
 >>>>>>> 69bac787b34468de167129cabbc66c4f7d61e057
+<<<<<<< HEAD
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (12.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Hoodie"], ["description", "Lengan Panjang"], ["created_at", "2018-11-15 02:51:45.835824"], ["updated_at", "2018-11-15 02:51:45.835824"]]
+  [1m[35m (14.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2763782802185087970)[0m
+  ↳ /home/husnul/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (33.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/husnul/.rbenv/versions/2.5.3/bin/rake:23
+Migrating to CreateUsers (20181114073545)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/husnul/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (387.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" text, "password" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181114073545_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181114073545"]]
+  ↳ /home/husnul/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/husnul/.rbenv/versions/2.5.3/bin/rake:23
+Migrating to AddNameToProducts (20181114081921)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/husnul/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (10.2ms)[0m  [1m[35mALTER TABLE "products" ADD "name" text[0m
+  ↳ db/migrate/20181114081921_add_name_to_products.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/husnul/.rbenv/versions/2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2763782802185087970)[0m
+  ↳ /home/husnul/.rbenv/versions/2.5.3/bin/rake:23
+=======
 >>>>>>> 259925a347e85ff012769736ffc58e6fdee2bd72
 >>>>>>> master
+<<<<<<< HEAD
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
@@ -563,6 +593,34 @@ activerecord (5.2.1) lib/active_record/migration.rb:1059:in `get_all_versions'
 activerecord (5.2.1) lib/active_record/migration.rb:1071:in `needs_migration?'
 activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
 activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+=======
+<<<<<<< HEAD
+=======
+Started GET "/" for 127.0.0.1 at 2018-11-15 09:22:07 +0700
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.1.3) lib/pg.rb:56:in `initialize'
+pg (1.1.3) lib/pg.rb:56:in `new'
+pg (1.1.3) lib/pg.rb:56:in `connect'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:684:in `connect'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `new'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `postgresql_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.1) lib/active_record/migration.rb:554:in `call'
+>>>>>>> e59c1268149107ef42c4deef7bb38c4cf3147a1d
 actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
 activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -594,6 +652,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2763782802185087970)[0m
   ↳ /home/refiqi96/.rvm/gems/ruby-2.5.3/bin/rake:23
   [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -648,6 +707,28 @@ rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
 rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
 actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
 activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+=======
+Started GET "/" for 127.0.0.1 at 2018-11-15 09:24:31 +0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "tokobaju_development" does not exist
+):
+  
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:688:in `rescue in connect'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:683:in `connect'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `new'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `postgresql_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.1) lib/active_record/migration.rb:554:in `call'
+>>>>>>> e59c1268149107ef42c4deef7bb38c4cf3147a1d
 actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
 activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -679,6 +760,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/refiqi96/.rvm/gems/ruby-2.5.3/bin/rake:23
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
@@ -916,6 +998,24 @@ rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
 rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
 actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
 activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+=======
+  [1m[35m (910.6ms)[0m  [1m[35mCREATE DATABASE "tokobaju_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (311.3ms)[0m  [1m[35mCREATE DATABASE "tokobaju_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-11-15 09:26:37 +0700
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+>>>>>>> e59c1268149107ef42c4deef7bb38c4cf3147a1d
 actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
 activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -947,6 +1047,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/productcategory" for 127.0.0.1 at 2018-11-16 11:43:22 +0700
 Processing by ProductcategoryController#create as */*
   Parameters: {"product_id"=>"1", "category_id"=>"1"}
@@ -980,3 +1081,100 @@ NoMethodError (undefined method `permit' for "1":String):
   
 app/controllers/productcategory_controller.rb:51:in `prodcat_params'
 app/controllers/productcategory_controller.rb:19:in `create'
+=======
+  [1m[35m (22.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2763782802185087970)[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreateUsers (20181114073545)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" text, "password" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181114073545_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181114073545"]]
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreateUserRoles (20181114083032)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "user_roles" ("id" bigserial primary key, "user_id" integer, "role_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181114083032_create_user_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181114083032"]]
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-15 02:27:03.807520"], ["updated_at", "2018-11-15 02:27:03.807520"]]
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2763782802185087970)[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2763782802185087970)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateProductReviews (20181115023950)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "product_reviews" ("id" bigserial primary key, "comment" character varying, "rate" integer)[0m
+  ↳ db/migrate/20181115023950_create_product_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181115023950"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (22.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2763782802185087970)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2763782802185087970)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateProductReviews (20181115033153)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (54.8ms)[0m  [1m[35mCREATE TABLE "product_reviews" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181115033153_create_product_reviews.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2763782802185087970)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE "tokobaju_development" ENCODING = 'unicode'[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "tokobaju_test" ENCODING = 'unicode'[0m
+  ↳ /Users/febriasundusi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2763782802185087970)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateProductReviews (20181115033153)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "product_reviews" ("id" bigserial primary key, "comment" character varying, "rate" integer)[0m
+  ↳ db/migrate/20181115033153_create_product_reviews.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2763782802185087970)[0m
+  ↳ bin/rails:9
+>>>>>>> 78629671d21aa29f837865f57efab758fb0f37e2
+=======
+>>>>>>> 8aaecd5e9ea9cc16ee4ee2e887c8df0c4bd6a43d
+>>>>>>> f106042d8a98e1636de717c8734ab1d483ace2a3
+>>>>>>> e59c1268149107ef42c4deef7bb38c4cf3147a1d
